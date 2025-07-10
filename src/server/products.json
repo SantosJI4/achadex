@@ -1,0 +1,59 @@
+[
+  {
+    "name": "iury",
+    "initialPrice": 200,
+    "discountedPrice": 100,
+    "image": "https://sp.yimg.com/ib/th?id=OPHS.l70NFmiTPjSG3g474C474&o=5&pid=21.1&w=160&h=105",
+    "rating": 2,
+    "coupons": [],
+    "id": 1
+  },
+  {
+    "name": "iuryw2",
+    "initialPrice": 100,
+    "discountedPrice": 55,
+    "image": "https://sp.yimg.com/ib/th?id=OPHS.l70NFmiTPjSG3g474C474&o=5&pid=21.1&w=160&h=105",
+    "rating": 3,
+    "coupons": [],
+    "id": 2
+  },
+  {
+    "name": "iuiytu",
+    "initialPrice": 199,
+    "discountedPrice": 67,
+    "image": "https://sp.yimg.com/ib/th?id=OPHS.l70NFmiTPjSG3g474C474&o=5&pid=21.1&w=160&h=105",
+    "rating": 4,
+    "coupons": [],
+    "id": 3
+  },
+  {
+    "name": "Jose iury",
+    "initialPrice": 20,
+    "discountedPrice": 9.99,
+    "image": "https://sp.yimg.com/ib/th?id=OPHS.l70NFmiTPjSG3g474C474&o=5&pid=21.1&w=160&h=105",
+    "rating": 3,
+    "coupons": [],
+    "id": 4
+  },
+  {
+    "name": "Calça jeans Masculina ",
+    "initialPrice": 200,
+    "discountedPrice": 80,
+    "image": "https://sp.yimg.com/ib/th?id=OPHS.qvDH0CuvvkdFig474C474&o=5&pid=21.1&w=160&h=105",
+    "rating": 5,
+    "coupons": [],
+    "link": "https://produto.mercadolivre.com.br/MLB-5328634590-kit3-calca-jeans-masculina-elastano-lycra-skinny-tradicional-_JM?matt_tool=59082313&matt_word=&matt_source=bing&matt_campaign=MLB_ML_BING_AO_APP%20%26%20SPORTS-ALL-ALL_X_PLA_ALLB_TXS_ALL&matt_campaign_id=382858293&matt_ad_group=APP%20%26%20SPORTS&matt_match_type=e&matt_network=o&matt_device=c&matt_keyword=default&msclkid=dd9c553d58961a0441573d53a58b8303&utm_source=bing&utm_medium=cpc&utm_campaign=MLB_ML_BING_AO_APP%20%26%20SPORTS-ALL-ALL_X_PLA_ALLB_TXS_ALL&utm_term=4581252654962580&utm_content=APP%20%26%20SPORTS",
+    "id": 5
+  },
+  {
+    "name": "iury",
+    "initialPrice": 99,
+    "discountedPrice": 49.97,
+    "image": "https://sp.yimg.com/ib/th?id=OPHS.l70NFmiTPjSG3g474C474&o=5&pid=21.1&w=160&h=105",
+    "rating": 5,
+    "coupons": [],
+    "link": "https://produto.mercadolivre.com.br/MLB-5328634590-kit3-calca-jeans-masculina-elastano-lycra-skinny-tradicional-_JM?matt_tool=59082313&matt_word=&matt_source=bing&matt_campaign=MLB_ML_BING_AO_APP%20%26%20SPORTS-ALL-ALL_X_PLA_ALLB_TXS_ALL&matt_campaign_id=382858293&matt_ad_group=APP%20%26%20SPORTS&matt_match_type=e&matt_network=o&matt_device=c&matt_keyword=default&msclkid=dd9c553d58961a0441573d53a58b8303&utm_source=bing&utm_medium=cpc&utm_campaign=MLB_ML_BING_AO_APP%20%26%20SPORTS-ALL-ALL_X_PLA_ALLB_TXS_ALL&utm_term=4581252654962580&utm_content=APP%20%26%20SPORTS",
+    "note": "Muito Bom o tecido das calças, eu comprei as 3 e depois comprei mais para presentes ",
+    "id": 6
+  }
+]
