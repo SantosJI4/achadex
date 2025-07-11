@@ -90,11 +90,11 @@ app.post('/dislike', (req, res) => {
   res.json({ success: true, likes: { like: likeCount, dislike: dislikeCount } });
 });
 
-app.use(express.static(path.join(__dirname, '..', 'dist')));
+app.use(express.static(path.join(__dirname, '..', '..', 'dist')));
 
 // Para qualquer rota não-API, devolva o index.html do build
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'dist', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', '..', 'dist', 'index.html'));
 });
 
 app.listen(PORT, HOST, () => {
