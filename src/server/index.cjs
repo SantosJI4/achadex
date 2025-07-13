@@ -89,11 +89,19 @@ app.post('/dislike', (req, res) => {
 });
 
 // Servir arquivos estáticos do frontend (dist na raiz do projeto)
-app.use(express.static(path.join(__dirname, '..', '..', 'dist')));
+const DIST_DIR = path.resolve(__dirname, '..', '..', 'dist');
+
+// Verifica se a pasta dist existe
+if (!fs.existsSync(DIST_DIR)) {
+  console.warn(`⚠️  Pasta 'dist' não encontrada em: ${DIST_DIR}. Rode 'npm run build' no frontend.`);
+}
+
+// Servir arquivos estáticos do frontend (dist na raiz do projeto)
+app.use(express.static(DIST_DIR));
 
 // Para qualquer rota não-API, devolva o index.html do build
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', '..', 'dist', 'index.html'));
+  res.sendFile(path.join(DIST_DIR, 'index.html'));
 });
 
 app.listen(PORT, HOST, () => {
