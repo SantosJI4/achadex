@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Produto | Achadinhos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/criador.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastrar Produto</h1>
+    <form id="product-form" autocomplete="off">
+      <div>
+        <label for="id">ID do Produto</label>
+        <input type="text" id="id" name="id" required placeholder="Ex: 001">
+      </div>
+      <div>
+        <label for="nome">Nome do Produto</label>
+        <input type="text" id="nome" name="nome" required placeholder="Ex: Fone Bluetooth Esportivo">
+      </div>
+      <div>
+        <label for="foto">Foto do Produto</label>
+        <input type="url" id="foto" name="foto" required placeholder="URL da imagem">
+        <img id="preview" class="preview-img" style="display:none;" alt="Prévia da imagem">
+      </div>
+      <div>
+        <label for="link">Link da Loja</label>
+        <input type="url" id="link" name="link" required placeholder="Ex: https://shopee.com.br/produto">
+      </div>
+      <div class="input-group">
+        <div>
+          <label for="preco-antigo">Preço Antigo</label>
+          <input type="text" id="preco-antigo" name="preco-antigo" required placeholder="Ex: R$ 99,90">
+        </div>
+        <div>
+          <label for="preco-novo">Preço Novo</label>
+          <input type="text" id="preco-novo" name="preco-novo" required placeholder="Ex: R$ 39,90">
+        </div>
+      </div>
+      <div class="input-group">
+        <div>
+          <label for="desconto">Desconto (%)</label>
+          <input type="number" id="desconto" name="desconto" min="0" max="100" required placeholder="Ex: 60">
+        </div>
+        <div>
+          <label for="cupom">Cupom</label>
+          <input type="text" id="cupom" name="cupom" placeholder="Ex: ACHADINHO10">
+        </div>
+      </div>
+      <div>
+        <label for="loja">Identificador da Loja</label>
+        <input type="text" id="loja" name="loja" required placeholder="Ex: shopee, mercadolivre, americanas">
+        <div class="help-text">Use: <b>shopee</b>, <b>mercadolivre</b>, <b>americanas</b>, etc. (para exibir o ícone correto)</div>
+      </div>
+      <button type="submit">Cadastrar Produto</button>
+    </form>
+  </div>
+  <script>
+    // No main.js
+const productForm = document.getElementById('product-form');
+if (productForm) {
+  productForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const produto = {
+      id: document.getElementById('id').value,
+      nome: document.getElementById('nome').value,
+      foto: document.getElementById('foto').value,
+      link: document.getElementById('link').value,
+      precoAntigo: document.getElementById('preco-antigo').value,
+      precoNovo: document.getElementById('preco-novo').value,
+      desconto: document.getElementById('desconto').value,
+      cupom: document.getElementById('cupom').value,
+      loja: document.getElementById('loja').value
+    };
+
+    fetch('http://localhost:5000/produtos', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(produto)
+    })
+    .then(res => res.json())
+    .then(data => {
+      alert('Produto cadastrado com sucesso!');
+      productForm.reset();
+      const preview = document.getElementById('preview');
+      if (preview) preview.style.display = 'none';
+    })
+    .catch(() => {
+      alert('Erro ao cadastrar produto!');
+    });
+  });
+
+  // Preview da imagem ao colar a URL
+  const fotoInput = document.getElementById('foto');
+  const preview = document.getElementById('preview');
+  if (fotoInput && preview) {
+    fotoInput.addEventListener('input', function() {
+      if (fotoInput.value) {
+        preview.src = fotoInput.value;
+        preview.style.display = 'block';
+      } else {
+        preview.style.display = 'none';
+      }
+    });
+  }
+}
+  </script>
+</body>
+</html>

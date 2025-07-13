@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "nome": "fone pronto",
+    "foto": "https://sp.yimg.com/ib/th?id=OPHS.8U1GAABqf1vS8w474C474&o=5&pid=21.1&w=160&h=105",
+    "link": "https://sp.yimg.com/ib/th?id=OPHS.8U1GAABqf1vS8w474C474&o=5&pid=21.1&w=160&h=105",
+    "precoAntigo": "4",
+    "precoNovo": "1,99",
+    "desconto": "90",
+    "cupom": "222",
+    "loja": "mercadolivre"
+  },
+  {
+    "id": "2",
+    "nome": "Celular J1 Mini",
+    "foto": "https://tse1.mm.bing.net/th/id/OIP.QVd2tztMML40WV53cLPfNAHaHa?pid=Api&P=0&h=180",
+    "link": "https://r.search.yahoo.com/_ylt=AwrFRmOnEXRoHQIAwLPz6Qt.;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1753646759/RO=10/RU=https%3a%2f%2fshopee.com.br%2fsearch%3fkeyword%3dsamsung%2520j1%2520mini/RK=2/RS=J89ag0i2d59F7LTNpb9O0SezqTo-",
+    "precoAntigo": "399,99",
+    "precoNovo": "150,99",
+    "desconto": "50",
+    "cupom": "achadex",
+    "loja": "shopee"
+  },
+  {
+    "id": "3",
+    "nome": "Mascara V de Vingança",
+    "foto": "http://images.tcdn.com.br/img/img_prod/486174/mascara_v_de_vinganca_200_1_20160930163712.jpg",
+    "link": "http://images.tcdn.com.br/img/img_prod/486174/mascara_v_de_vinganca_200_1_20160930163712.jpg",
+    "precoAntigo": "55,55",
+    "precoNovo": "35,99",
+    "desconto": "20",
+    "cupom": "achadex",
+    "loja": "americanas"
+  }
+]
