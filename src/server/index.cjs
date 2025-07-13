@@ -69,7 +69,6 @@ app.post('/like', (req, res) => {
   likes[productId].users[userId] = 'like';
   saveLikes(likes);
 
-  // Conta likes/dislikes
   const likeCount = Object.values(likes[productId].users).filter(v => v === 'like').length;
   const dislikeCount = Object.values(likes[productId].users).filter(v => v === 'dislike').length;
   res.json({ success: true, likes: { like: likeCount, dislike: dislikeCount } });
@@ -84,12 +83,12 @@ app.post('/dislike', (req, res) => {
   likes[productId].users[userId] = 'dislike';
   saveLikes(likes);
 
-  // Conta likes/dislikes
   const likeCount = Object.values(likes[productId].users).filter(v => v === 'like').length;
   const dislikeCount = Object.values(likes[productId].users).filter(v => v === 'dislike').length;
   res.json({ success: true, likes: { like: likeCount, dislike: dislikeCount } });
 });
 
+// Servir arquivos estáticos do frontend (dist na raiz do projeto)
 app.use(express.static(path.join(__dirname, '..', '..', 'dist')));
 
 // Para qualquer rota não-API, devolva o index.html do build
